@@ -78,14 +78,14 @@ fun TrailApp(modifier: Modifier = Modifier) {
         when (colorPreset) {
             0 -> Color.Blue
             1 -> Color.Red
-            else -> Color.Magenta
+            else -> Color.Green
         }
 
     val parkColor =
         when (colorPreset) {
-            0 -> Color.Green.copy(alpha = 0.3f)
-            1 -> Color.Yellow.copy(alpha = 0.3f)
-            else -> Color.Cyan.copy(alpha = 0.3f)
+            0 -> Color.Cyan.copy(alpha = 0.3f)
+            1 -> Color.Magenta.copy(alpha = 0.3f)
+            else -> Color.Yellow.copy(alpha = 0.3f)
         }
 
     Column(modifier = modifier.fillMaxSize()) {
@@ -94,15 +94,15 @@ fun TrailApp(modifier: Modifier = Modifier) {
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Button(onClick = { colorPreset = 0 }) {
-                Text("Blue/Green")
+                Text("Blue/Cyan")
             }
 
             Button(onClick = { colorPreset = 1 }) {
-                Text("Red/Yellow")
+                Text("Red/Pink")
             }
 
             Button(onClick = { colorPreset = 2 }) {
-                Text("Pink/Cyan")
+                Text("Green/Yellow")
             }
         }
 
